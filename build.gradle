@@ -1,0 +1,17 @@
+apply plugin: 'java-library'
+
+apply plugin: 'idea'
+
+javadoc {
+    source = sourceSets.main.allJava
+    classpath = configurations.compile
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+}
+
